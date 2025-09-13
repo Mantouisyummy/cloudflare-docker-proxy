@@ -1,13 +1,15 @@
-name = 'cloudflare-docker-proxy-new'
+name = "cloudflare-docker-proxy"
 compatibility_date = "2023-12-01"
+
+main = "src/index.ts"
+
+[assets]
+directory = "./dist"
 
 [dev]
 ip = "0.0.0.0"
 port = 8787
 local_protocol = "http"
-
-[build]
-command = "npm run build"
 
 [env.dev.vars]
 MODE = "debug"
@@ -22,7 +24,7 @@ routes = [
 
 [env.production.vars]
 MODE = "production"
-TARGET_UPSTREAM = "https://ghcr.io"
+TARGET_UPSTREAM = ""
 
 [env.staging]
 name = "cloudflare-docker-proxy-staging"
@@ -30,4 +32,4 @@ route = { pattern = "docker-staging.dawngs.top", custom_domain = true }
 
 [env.staging.vars]
 MODE = "staging"
-TARGET_UPSTREAM = "https://ghcr.io"
+TARGET_UPSTREAM = ""
