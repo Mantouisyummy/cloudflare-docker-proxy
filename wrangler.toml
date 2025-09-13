@@ -24,7 +24,9 @@ routes = [
 
 [env.production.vars]
 MODE = "production"
-TARGET_UPSTREAM = ""
+TARGET_UPSTREAM = "https://ghcr.io"
+CUSTOM_DOMAIN = "dawngs.top"
+
 
 [env.staging]
 name = "cloudflare-docker-proxy-staging"
@@ -32,4 +34,5 @@ route = { pattern = "docker-staging.dawngs.top", custom_domain = true }
 
 [env.staging.vars]
 MODE = "staging"
-TARGET_UPSTREAM = ""
+TARGET_UPSTREAM = "https://ghcr.io"
+CUSTOM_DOMAIN = "dawngs.top"
