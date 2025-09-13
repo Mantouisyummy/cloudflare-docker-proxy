@@ -3,7 +3,7 @@
   "private": true,
   "description": "",
   "version": "1.0.0",
-  "packageManager": "yarn@4.9.1"
+  "packageManager": "yarn@4.9.1",
   "author": "ciiiii <allen.cccccnm@gmail.com>",
   "dependencies": {},
   "devDependencies": {
